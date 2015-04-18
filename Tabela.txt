@@ -1,0 +1,29 @@
+# viana-rocksaSIRENE => RC0
+
+REL1 => RC0
+REL2 => RE0
+LED1 => PORTD
+LED2 => PORTB
+DIS1 => RA2
+DIS2 => RA3
+DIS3 => RA4
+DIS4 => RA5
+TEMP => RA2
+INFR => RX0
+RESIS =>RX5
+VENT => RC2
+ANAL-0 => AN0
+ANAL-1 => AN1
+
+INT 2 => RB2
+INT 1 => RB1
+INT 0 => RB0
+
+RB3 => INTERRUPTORES INDIVIDUAL
+RB4 => INTERRUPTORES INDIVIDUAL
+RB5 => INTERRUPTORES INDIVIDUAL
+RB6 => INTERRUPTORES INDIVIDUAL
+
+
+Técnica de Multiplicação: Por que o mesmo barramento é compartilhado entre todos
+

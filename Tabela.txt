@@ -27,3 +27,12 @@ RB6 => INTERRUPTORES INDIVIDUAL
 
 Técnica de Multiplicação: Por que o mesmo barramento é compartilhado entre todos
 
+LCD Colunas: 16 Linhas: 2
+
+PORTEE.RE2
+PORTEE.RE1
+
+PORTD.RD4
+PORTD.RD5
+PORTD.RD6
+PORTD.RD7

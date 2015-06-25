@@ -1,0 +1,20 @@
+// Oscilar um único LED em RB2
+// LED opera com lógica NEGATIVA (INVERTIDA!!!)
+// Frequência de 2 HZ
+// Por durante dez repetições
+
+Variaveis
+  Inteiro I
+
+Início
+  Configura todas as entradas/saídas como digitais
+  Configura RB2 como Saída
+  Configura estado inicial de RB2 <- 1 // LED DESLIGADO
+
+  Para (I = 0 até I < 10 passo 1) faça:
+    RB2 <- 0
+    Aguarde(250ms)
+    RB2 <- 1
+    Aguarde(250ms)
+  Fim para
+Fim

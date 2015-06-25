@@ -1,0 +1,28 @@
+// Oscilar um único LED em RB2
+// Somente quando um pulso de RD0 ocorrer
+//   -> de NLI para NLS
+// LED opera com lógica Negativa
+// Frêquencia de 2HZ
+//   -> 2HZ -> T = 500ms -> 250ms em NLS + 250 em NLI
+// Por durante 10 repetições
+
+Variaveis
+  Inteiro I
+
+Inicio
+  Configura todas as entradas/saídas como digital
+  Configura RB2 como saída
+  Configura RD0 como entrada
+  Configura estado inicial de RB2 <- 1 // LED Desligado
+
+  Enquanto (1) faça:
+    Se RD0 = 1 então:
+      Para (I = 0 até I < 10 passo 1) faça:
+        RB2 <- 0
+        Aguarde(250ms)
+        RB2 <- 1
+        Aguarde(250ms)
+      Fim para
+    Fim se
+  Fim enquanto
+Fim

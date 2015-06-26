@@ -3,10 +3,10 @@
 Variaveis
 
 Inicio
-  Configura todas as entradas/saídas como digitais
-  Configura RA2, RA3, RA4, RA5 como saída
+  Configura todas entradas analógicas como digitais.
+  Configura os registradores do PORTD como saída.
+  Configura os registradores do PORTA.RA2 até PORTA.RA5 como saída.
   Configura os módulo de display RA2 até RA5 <- 0 // Desligado
-  Configura Barra de Leds PORTD como saída
 
   Enquanto(1) faça:
     RA2 <- 1 // Display RA2 LIGADO

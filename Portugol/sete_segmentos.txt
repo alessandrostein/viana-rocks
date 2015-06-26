@@ -1,0 +1,29 @@
+// APRESENTA O NUMERO: "6.057" NO MOSTRADOR DE SETE SEGMENTOS
+
+Variaveis
+
+Inicio
+  Configura todas as entradas/saídas como digitais
+  Configura RA2, RA3, RA4, RA5 como saída
+  Configura os módulo de display RA2 até RA5 <- 0 // Desligado
+  Configura Barra de Leds PORTD como saída
+
+  Enquanto(1) faça:
+    RA2 <- 1 // Display RA2 LIGADO
+    PORTD <- 0b10011110 // ESCREVE 6.
+    Aguarde(15ms)
+    RA2 <- 0 // Desliga
+    RA3 <- 1
+    PORTD <- 0b10111111 // ESCREVE 0
+    Aguarde(15ms)
+    RA3 <- 0
+    RA4 <- 1
+    PORTD <- 0b01101101 // ESCREVE 5
+    Aguarde(15ms)
+    RA4 <- 0
+    RA5 <- 1
+    PORTD <- 0b00000111 // ESCREVE 7
+    Aguarde(15ms)
+  Fim enquanto
+
+Fim

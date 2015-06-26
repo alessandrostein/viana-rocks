@@ -4,7 +4,6 @@ Inicio
   Configura todas as entradas/saídas como digitais
   Configura Relé 1 (RC1 <- 0) como saída
   Configura Relé 2 (RC0 <- 0) como saída
-  Inicia os dois Relés como desligado RC0 <- 0 e RE0 <- 0
 
   Enquanto(1) faça:
     RC0 <- 1 // Liga Relé 1

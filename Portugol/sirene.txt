@@ -1,0 +1,24 @@
+// Faça uma Sirene tocar com os seguintes requisitos
+//  * Utilize RC1
+//  * Fique 90% do tempo desligado
+//  * Fique 10% do tempo ligado
+
+Variaveis
+  const float PERCENTUAL_DESLIGADO = 0.9
+  const float PERCENTUAL_LIGADO = 0.1
+  const float TOTAL = 1000
+
+  float play_ms
+
+Inicio
+  Configura todas as entradas/saídas como digitais
+  Configura RC1 como Saída
+  Configura estado inicial de RC1 <- 0 // SIRENE DESLIGADO
+
+  Enquanto(1) faça:
+    RC1 <- 1 // LIGA SIRENE
+    Aguarde(TOTAL * PERCENTUAL_LIGADO)
+    RC1 <- 0 // DESLIGA SIRENE
+    Aguarde(TOTAL * PERCENTUAL_DESLIGADO)
+  Fim enquanto
+Fim

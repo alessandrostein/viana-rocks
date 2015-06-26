@@ -1,0 +1,38 @@
+// Ler ADC em AN0
+// Apresentar valor (resultado) lido no LCD
+// Na primeira linha, alinhado a direita
+// Apresentar a mensagem "CONTAGENS: "
+// Na primeira alinha a esquerda
+// Atualizar o resultado a cada UM minuto e
+// Piscar uma única vez um único LED e RB2 (250ms)
+// O LED opera com lógica NEGATIVA
+
+Variaveis
+  Inteiro resultado = 0
+  Char ResultadoSTR[6]
+  Configura terminais de controle e de dados do LCD
+
+Inicio
+  Configura AN0 como analógico
+  Configura demais entradas/saídas como digital
+  Configura RA0 como entrada
+  Configura RB2 como saída
+  Configura estado inicial de RB2 <- 1 //LED DESLIGADO
+  Inicie(LCD)
+  Desliga cursor(LCD)
+  Limpa tela(LCD)
+  Escreva("CONTAGENS:_" na linha 1 coluna 1 do LCD)
+  Inicie(AN0)
+
+  Enquanto(1) faça:
+    Resultado <- Leia(AN0)
+    Converte de Inteiro para String (Resultado, ResultadoSTR)
+    Escreva(ResultadoSTR na linha 1 coluna 11 do LCD)
+    RB2 <- 0 // LIGA O LED
+    Aguarde(250ms)
+    RB2 <- 1
+    Aguarde(1min - 250ms)
+
+  Fim enquanto
+
+Fim
